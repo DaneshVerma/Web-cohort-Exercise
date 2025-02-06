@@ -1,0 +1,48 @@
+body {
+  background-color: gainsboro;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.links {
+  background-color: cornflowerblue;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+header {
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+h2 {
+  color: navy;
+}
+.blog {
+  background-color: whitesmoke;
+  padding: 25px;
+}
+.image {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  background-color: dimgray;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 0 0 0;
+}
