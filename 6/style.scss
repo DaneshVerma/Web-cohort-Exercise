@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+
+  .card {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: small;
+    border-radius: 0.2rem;
+    transition: all ease-in 0.2s;
+    box-shadow: 0rem 0.1rem 5px 0px;
+    .image {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0.2rem;
+      img {
+        border-radius: 0.5rem;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    h5,
+    h4 {
+      text-align: center;
+      font-weight: 900;
+    }
+    p {
+      text-align: center;
+      font-size: 0.6rem;
+    }
+  }
+  .card:hover {
+    cursor: pointer;
+    background: bisque;
+    img {
+      border-radius: 0rem;
+      transform: scale(105%);
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    height: 70%;
+
+    .card {
+      width: 20%;
+      height: 50%;
+      margin: 0;
+    }
+  }
+  footer{
+    position: absolute;
+    bottom: 0;
+  }
+}
+hr {
+  color: gray;
+  width: 80%;
+  margin:  1rem auto;
+
+}
+footer {
+  margin: 1rem 0;
+  text-align: center;
+  color: gray;
+  width: 100%
+}
