@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #0e0e0e;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #dac5a7;
+}
+
+main {
+  width: 100%;
+}
+main nav {
+  z-index: 2;
+  padding: 1rem;
+  position: fixed;
+  width: 91%;
+  border: rgb(52, 51, 48) 1px solid;
+  transform: translate(5%, 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background-color: rgba(218, 197, 167, 0.05);
+}
+main nav .nav-left h3 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+main nav .nav-right {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+main nav .nav-right ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+main nav .nav-right ul .nav-link {
+  display: none;
+}
+main nav .nav-right ul .nav-link a {
+  color: #dac5a7;
+}
+main nav .nav-right ul li a {
+  text-decoration: none;
+}
+main nav .nav-right ul .menu-btn {
+  color: wheat;
+}
+main nav .nav-right ul .talk-btn {
+  background-color: wheat;
+  padding: 0.5rem;
+  color: black;
+  font-weight: 200;
+  border-radius: 0.2rem;
+}
+
+.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.view-1 img {
+  width: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.view-1 h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 100;
+}
+.view-1 p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0.9rem 0;
+}
+.view-1 p br {
+  display: none;
+}
+
+.view-2 .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.view-2 .button-container button {
+  background: #181716;
+  outline: none;
+  border: rgba(218, 197, 167, 0.15) solid 0.5px;
+  border-radius: 50%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-2 .button-container button svg {
+  height: 1rem;
+  fill: wheat;
+}
+.view-2 .button-container button:hover {
+  background: #24201e;
+  border-color: rgb(78, 71, 60);
+}
+.view-2 .container {
+  width: 100%;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+.view-2 .container .marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.view-2 .container .marquee::after {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, #0e0e0e, transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.view-2 .container .marquee::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to left, #0e0e0e, transparent);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.view-2 .container .marquee .text {
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marque 10s linear infinite both;
+}
+.view-2 .container .marquee .text p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.view-3 .container .card {
+  border: #24201e 1px solid;
+  padding: 2rem;
+  margin: 1rem;
+  background-color: rgb(24, 23, 22);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-3 .container .card .button-container button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #dac5a7;
+}
+.view-3 .container .card .button-container button svg {
+  height: 2rem;
+  color: #dac5a7;
+  background-color: #24201e;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: rgba(218, 197, 167, 0.15) solid 0.5px;
+  transform: rotate(230deg);
+  transition: all ease-in-out 0.2s;
+}
+.view-3 .container .card .button-container button:hover {
+  cursor: pointer;
+}
+.view-3 .container .card .button-container button:hover svg {
+  background: #2e2926;
+  border-color: rgb(78, 71, 60);
+  transform: rotate(270deg);
+}
+
+.view-4 {
+  width: 100%;
+}
+.view-4 .heading {
+  margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-4 h1 {
+  text-align: center;
+  font-weight: 100;
+}
+.view-4 .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.view-4 .button-container button {
+  background: #181716;
+  outline: none;
+  border: rgba(218, 197, 167, 0.15) solid 0.5px;
+  border-radius: 50%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-4 .button-container button svg {
+  height: 1rem;
+  fill: wheat;
+}
+.view-4 .button-container button:hover {
+  background: #24201e;
+  border-color: rgb(78, 71, 60);
+}
+.view-4 #rotate {
+  transform: rotate(230deg);
+}
+.view-4 .card-container {
+  margin: auto;
+  margin-top: 4rem;
+  width: 90%;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+.view-4 .card-container .card {
+  width: 100%;
+  position: relative;
+  border: #24201e 1px solid;
+}
+.view-4 .card-container .card img {
+  width: 100%;
+}
+.view-4 .card-container .card .box {
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  border: rgba(218, 197, 167, 0.5) 1px solid;
+  bottom: 10%;
+  left: 10%;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+.view-4 .card-container .card .box h4 {
+  font-weight: 100;
+}
+
+@keyframes marque {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: clamp(16px, 1vw, 32px);
+  }
+  main nav {
+    padding: 0.5rem;
+    width: 43%;
+    transform: translate(67%, 45%);
+  }
+  main nav .nav-right ul .nav-link {
+    display: inline;
+  }
+  main .view-1 img {
+    width: 40%;
+  }
+  main .view-1 h1 {
+    font-size: 8.5rem;
+  }
+  main .view-1 p {
+    font-size: 1.5rem;
+  }
+  main .view-1 p br {
+    display: block;
+  }
+  main .view-2 .container .marquee {
+    width: 50%;
+  }
+  main .view-3 .container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  main .view-4 .heading {
+    flex-direction: row;
+    margin: 4rem 5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .view-4 .card-container {
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  main .view-4 .card-container .card {
+    width: 48%;
+  }
+}/*# sourceMappingURL=style.css.map */
